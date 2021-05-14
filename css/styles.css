@@ -74,6 +74,7 @@ img {
 
 }
 
+
 /**********************************/
 /* 2. Menu
 /**********************************/
@@ -178,12 +179,13 @@ img {
 	background-color: var(--clr-pink-light);
 }
 
-.plano-c {
+.planos-c {
 	max-width: 960px;
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: flex-end;
 }
 
 .plano {
@@ -208,7 +210,7 @@ img {
 
 .plano__preco sup {
  	position: relative;
- 	font-size: 1.5em;
+ 	font-size: 1.5rem;
  	top: -20px;
 }
 
@@ -250,14 +252,37 @@ img {
 	text-align: center;
 	text-transform: uppercase;
 	border: 2px solid var(--clr-green-light);
-	 
+}
 
+.plano:last-child {
+	background-color: var(--clr-green-light);
+}
+
+.plano:last-child, .plano:last-child .plano__btn-comprar {
+	border: 2px solid var(--clr-pink-dark);
+}
+
+.plano:last-child .plano-lista__item::before, .plano:last-child .plano__divisor {
+	background: var(--clr-pink-dark);
+}
+
+@media (max-width: 800px) {
+	.plano:nth-child(3){
+		order: -2;
+	}
+	.plano:nth-child(2){
+		order: -1;
+	}
 }
 
 
 /**********************************/
 /* 7. Vantagens
 /**********************************/
+
+.vantagem__titulo {
+	
+}
 
 /**********************************/
 /* 8. Newsletter
